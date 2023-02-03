@@ -15,11 +15,9 @@ export default function ExpCarteResponsive({ data }) {
 
         <div className="flex flex-row justify-center mb-8">
           {data.dateDebut ? (
-            <>
-              <p className="text-center text-2xl font-bold text-[#FFC300]">
-                {data.dateDebut} - {data.dateFin}
-              </p>
-            </>
+            <p className="text-center text-2xl font-bold text-[#FFC300]">
+              {data.dateDebut} - {data.dateFin}
+            </p>
           ) : (
             <p className="text-center text-2xl font-bold text-[#FFC300]">
               {data.dateFin}
@@ -28,13 +26,12 @@ export default function ExpCarteResponsive({ data }) {
         </div>
 
         <div className="mb-20">
-            <img
-              className="w-[50%] h-[50%] mx-auto text-[#1C2833]"
-              src={data.url_image}
-              alt={data.titre}
-            />
-          </div>
-
+          <img
+            className="w-[50%] h-[50%] mx-auto text-[#1C2833]"
+            src={data.url_image}
+            alt={data.titre}
+          />
+        </div>
       </div>
     </div>
   );

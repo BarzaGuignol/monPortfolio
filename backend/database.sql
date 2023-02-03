@@ -156,7 +156,7 @@ INSERT INTO
 VALUES (
         1,
         "Projet 1",
-        "",
+        "@assets/projet1.png",
         "Premier projet réalisé au sein de la Wild Code School pour validation compétences HTML/CSS. Réalisation d'un site internet sur Stan Lee et ses comics.",
         "https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-TEAM-A",
         ""
@@ -164,7 +164,7 @@ VALUES (
     (
         2,
         "Projet 2",
-        "",
+        "@assets/projet2.png",
         "Deuxième projet réalisé au sein de la Wild Code School pour validation compétences React et Express. Réalisation d'un site d'e-commerce sur le thème de pokémon.",
         "https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-projet2-team2",
         ""
@@ -172,7 +172,7 @@ VALUES (
     (
         3,
         "Hackathon 1",
-        "",
+        "@assets/hackathon1.png",
         "48h pour créer un site internet sur le thème du voyage. Nous avons réalisé Space Journey, une interface haute en couleur pour faire voyager et jouer nos utilisateurs dans l'espace.",
         "https://github.com/o6ris/SpaceJourney",
         "https://dev--hackathon-space-journey.netlify.app/"
@@ -180,15 +180,15 @@ VALUES (
     (
         4,
         "Projet 3",
-        "",
+        "@assets/projet3.png",
         "Troisième projet réalisé au sein de la Wild Code School pour validation des compétences en React/Express/SQL. Réalisation d'une interface intranet pour créer, gérer et archiver des prises de décisions en fullstack (interface front en React et back en Express)",
         "https://github.com/WildCodeSchool/2022-09-RMT-JSCREW-Makesense",
-        ""
+        "https://makesense.remote-fr-3.wilders.dev/"
     ),
     (
         5,
         "Hackathon 2",
-        "",
+        "@assets/hackathon2.png",
         "48H pour créer un site de location d'une flotte de véhicules avec trois niveaux d'authentification. Elaboration d'une logique back pour donner la possibilité de mettre à jour la flotte de véhicule par des professionnels et donner la possibilité aux particuliers d'effectuer une réservation. Hackathon réalisé en partenariat avec Amazon Web Services.",
         "https://github.com/o6ris/NoPainNoGainTheComeBack/tree/dev",
         ""

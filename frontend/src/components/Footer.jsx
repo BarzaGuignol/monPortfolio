@@ -9,7 +9,12 @@ export default function Footer() {
         </p>
       </div>
       <div className="w-[80px] mx-auto mt-4">
-        <a className="text-[#FFC300]" href="" target="_blank">
+        <a
+          className="text-[#FFC300]"
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Le balcon
         </a>
       </div>
