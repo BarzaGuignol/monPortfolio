@@ -53,72 +53,62 @@ VALUES (
     ),
     (
         2,
-        "DUT GEII",
-        null,
-        2017,
-        "Diplôme Universitaire Technologique en Génie Electrique et Informatique Industrielle",
-        "https://faux-diplome.org/wp-content/uploads/2018/02/DUT.jpg",
-        2,
-        1
-    ),
-    (
-        3,
         "Projet ETNA intitulé la 4ème voie",
         2016,
         2017,
         "Mise en œuvre d’une matrice de 294 pixels à l’aide de lampe de chantier. Conception des cartes électroniques et programmes nécessaires.",
         "https://www.florentlamouroux.com/wdat/work64/img_0664web.jpg",
-        1,
+        2,
         1
     ),
     (
-        4,
+        3,
         "DUT GEII",
         null,
         2017,
         "Diplôme Universitaire Technologique en Génie Electrique et Informatique Industrielle. Cours : Automatisme / Electronique / Informatique de réseau / Electricité de puissance",
         "https://faux-diplome.org/wp-content/uploads/2018/02/DUT.jpg",
+        1,
+        1
+    ),
+    (
+        4,
+        "Stage Développement Informatique à RTE",
+        null,
+        2017,
+        "Stage de fin d'étude sur 3 mois. Mise en place d'un moteur de recherche interne à RTE en VBA.",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/RTE_logo.svg/180px-RTE_logo.svg.png",
         2,
         1
     ),
     (
         5,
-        "Stage Développement Informatique à RTE",
-        null,
-        2017,
-        "Stage de fin d'étude sur 3 mois. Mise en place d'un moteur de recherche interne à RTE en VBA.",
-        "",
+        "Technicien Tests",
+        2018,
+        2019,
+        "Expertise et gestion des différents produits aéronautiques sur plusieurs lignes de production en milieu sensible risque ESD.",
+        "https://upload.wikimedia.org/wikipedia/fr/thumb/5/5f/Safran_-_logo_2016.png/798px-Safran_-_logo_2016.png?20200125182820",
         1,
         1
     ),
     (
         6,
-        "Technicien Tests",
-        2018,
+        "Technicien de Maintenance",
         2019,
-        "Expertise et gestion des différents produits aéronautiques sur plusieurs lignes de production en milieu sensible risque ESD.",
-        "",
+        2022,
+        "Suivi régulier d'un parc de machines pour assurer le maintien de la production en atmosphère contrôlée de type salle blanche.",
+        "https://upload.wikimedia.org/wikipedia/fr/thumb/e/e0/STMicroelectronics_%28logo-2020%29.svg/512px-STMicroelectronics_%28logo-2020%29.svg.png?20200615215723",
         2,
         1
     ),
     (
         7,
-        "Technicien de Maintenance",
-        2019,
-        2022,
-        "Suivi régulier d'un parc de machines pour assurer le maintien de la production en atmosphère contrôlée de type salle blanche.",
-        "",
-        1,
-        1
-    ),
-    (
-        8,
         "Wild Code School",
         null,
         2023,
         "Activités et associations : Formation intensive 5 mois - Développeur Web Titre professionnel Développeur Web et Web Mobile, inscrit au RNCP, de niveau 5 (équivalent Bac+2)",
-        "",
-        2,
+        "https://www.wildcodeschool.com/assets/wildcodeschool-logo-meta-image-f6f2f7f52b82bfc419f031f6a989020a8b094d7a4e6676ab6f0dff0b0f470da9.png",
+        1,
         1
     );
 
