@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React from "react";
 
 export default function ExpCarte({ data }) {
@@ -34,14 +36,18 @@ export default function ExpCarte({ data }) {
           </div>
 
           <div className="w-2/5 pr-20">
-            <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">{data.titre}</p>
+            <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">
+              {data.titre}
+            </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
           </div>
         </div>
       ) : (
         <div className="flex flex-row">
           <div className="w-2/5 pl-20">
-            <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">{data.titre}</p>
+            <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">
+              {data.titre}
+            </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
           </div>
 
