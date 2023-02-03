@@ -1,0 +1,5 @@
+.avatar {
+  background-image: url("@assets/avatar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
