@@ -1,0 +1,30 @@
+.corners {
+    position: relative;
+  }
+  
+  .top, .bottom {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+  
+  .top {
+    top: 15%;
+    border-top: 1px solid;
+  }
+  
+  .bottom {
+    bottom: 25%;
+    border-bottom: 1px solid;
+  }
+  
+  .left {
+    left: -5%;
+    border-left: 1px solid;
+  }
+  
+  .right {
+    right: -5%;
+    border-right: 1px solid;
+  }
