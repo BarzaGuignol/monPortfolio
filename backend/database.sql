@@ -22,7 +22,8 @@ CREATE TABLE
     experiences (
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         titre VARCHAR(255) NOT NULL,
-        date INT NOT NULL,
+        dateDebut INT,
+        dateFin INT NOT NULL,
         description VARCHAR(500) NOT NULL,
         url_image VARCHAR(255) NOT NULL,
         impairOuPair INT NOT NULL,
@@ -33,17 +34,91 @@ INSERT INTO
     experiences (
         id,
         titre,
-        date,
+        dateDebut,
+        dateFin,
         description,
         url_image,
-        impairOuPair
+        impairOuPair,
+        competences_id
     )
 VALUES (
         1,
         "Baccalauréat",
+        null,
         2015,
         "Baccalauréat filière Scientifique option Science de l'ingénieur spécialité physique-chimie",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/2004_Baccalaur%C3%A9at_g%C3%A9n%C3%A9ral.pdf/page1-800px-2004_Baccalaur%C3%A9at_g%C3%A9n%C3%A9ral.pdf.jpg?20191031103801",
+        1,
+        1
+    ),
+    (
+        2,
+        "DUT GEII",
+        null,
+        2017,
+        "Diplôme Universitaire Technologique en Génie Electrique et Informatique Industrielle",
+        "https://faux-diplome.org/wp-content/uploads/2018/02/DUT.jpg",
+        2,
+        1
+    ),
+    (
+        3,
+        "Projet ETNA intitulé la 4ème voie",
+        2016,
+        2017,
+        "Mise en œuvre d’une matrice de 294 pixels à l’aide de lampe de chantier. Conception des cartes électroniques et programmes nécessaires.",
+        "https://www.florentlamouroux.com/wdat/work64/img_0664web.jpg",
+        1,
+        1
+    ),
+    (
+        4,
+        "DUT GEII",
+        null,
+        2017,
+        "Diplôme Universitaire Technologique en Génie Electrique et Informatique Industrielle. Cours : Automatisme / Electronique / Informatique de réseau / Electricité de puissance",
+        "https://faux-diplome.org/wp-content/uploads/2018/02/DUT.jpg",
+        2,
+        1
+    ),
+    (
+        5,
+        "Stage Développement Informatique à RTE",
+        null,
+        2017,
+        "Stage de fin d'étude sur 3 mois. Mise en place d'un moteur de recherche interne à RTE en VBA.",
+        "",
+        1,
+        1
+    ),
+    (
+        6,
+        "Technicien Tests",
+        2018,
+        2019,
+        "Expertise et gestion des différents produits aéronautiques sur plusieurs lignes de production en milieu sensible risque ESD.",
+        "",
+        2,
+        1
+    ),
+    (
+        7,
+        "Technicien de Maintenance",
+        2019,
+        2022,
+        "Suivi régulier d'un parc de machines pour assurer le maintien de la production en atmosphère contrôlée de type salle blanche.",
+        "",
+        1,
+        1
+    ),
+    (
+        8,
+        "Wild Code School",
+        null,
+        2023,
+        "Activités et associations : Formation intensive 5 mois - Développeur Web Titre professionnel Développeur Web et Web Mobile, inscrit au RNCP, de niveau 5 (équivalent Bac+2)",
+        "",
+        2,
         1
     );
 
@@ -52,7 +127,7 @@ CREATE TABLE
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         nom VARCHAR(100) NOT NULL,
         annees_exp INT NOT NULL,
-        url_image VARCHAR(255) NOT NULL
+        icone VARCHAR(255) NOT NULL
     );
 
 INSERT INTO
@@ -60,7 +135,7 @@ INSERT INTO
         id,
         nom,
         annees_exp,
-        url_image
+        icone
     )
 VALUES (
         1,
@@ -73,9 +148,10 @@ CREATE TABLE
     projets (
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         titre VARCHAR(255) NOT NULL,
-        url_image VARCHAR(255) NOT NULL,
-        description VARCHAR(255) NOT NULL,
+        url_image VARCHAR(255),
+        description VARCHAR(500) NOT NULL,
         url_github VARCHAR(255) NOT NULL,
+        url_site varchar(255)
     );
 
 INSERT INTO
@@ -84,13 +160,47 @@ INSERT INTO
         titre,
         url_image,
         description,
-        url_github
+        url_github,
+        url_site
     )
 VALUES (
         1,
-        "projet 1",
+        "Projet 1",
         "",
-        "Site réalisé en HTML/CSS sur le thème des héros des comics",
+        "Premier projet réalisé au sein de la Wild Code School pour validation compétences HTML/CSS. Réalisation d'un site internet sur Stan Lee et ses comics.",
+        "https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-TEAM-A",
+        ""
+    ),
+    (
+        2,
+        "Projet 2",
+        "",
+        "Deuxième projet réalisé au sein de la Wild Code School pour validation compétences React et Express. Réalisation d'un site d'e-commerce sur le thème de pokémon.",
+        "https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-projet2-team2",
+        ""
+    ),
+    (
+        3,
+        "Hackathon 1",
+        "",
+        "48h pour créer un site internet sur le thème du voyage. Nous avons réalisé Space Journey, une interface haute en couleur pour faire voyager et jouer nos utilisateurs dans l'espace.",
+        "https://github.com/o6ris/SpaceJourney",
+        "https://dev--hackathon-space-journey.netlify.app/"
+    ),
+    (
+        4,
+        "Projet 3",
+        "",
+        "Troisième projet réalisé au sein de la Wild Code School pour validation des compétences en React/Express/SQL. Réalisation d'une interface intranet pour créer, gérer et archiver des prises de décisions en fullstack (interface front en React et back en Express)",
+        "https://github.com/WildCodeSchool/2022-09-RMT-JSCREW-Makesense",
+        ""
+    ),
+    (
+        5,
+        "Hackathon 2",
+        "",
+        "48H pour créer un site de location d'une flotte de véhicules avec trois niveaux d'authentification. Elaboration d'une logique back pour donner la possibilité de mettre à jour la flotte de véhicule par des professionnels et donner la possibilité aux particuliers d'effectuer une réservation. Hackathon réalisé en partenariat avec Amazon Web Services.",
+        "https://github.com/o6ris/NoPainNoGainTheComeBack/tree/dev",
         ""
     );
 
@@ -99,7 +209,7 @@ CREATE TABLE
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         titre VARCHAR(255) NOT NULL,
         url_image VARCHAR(255) NOT NULL,
-        url_boutique VARCHAR(255) NOT NULL
+        url_boutique VARCHAR(255)
     );
 
 INSERT INTO
@@ -112,8 +222,14 @@ INSERT INTO
 VALUES (
         1,
         "Robert Noyer: Les Yeux du Mal",
-        "",
-        ""
+        "https://m.media-amazon.com/images/I/51msy531FyL.jpg",
+        "https://www.amazon.fr/Robert-Noyer-Yeux-du-Mal/dp/2955806919"
+    ),
+    (
+        2,
+        "Le Marionnettiste",
+        "https://www.thebookedition.com/1671367-img_product_list/le-marionnettiste.jpg",
+        "https://www.thebookedition.com/fr/le-marionnettiste-p-394973.html"
     );
 
 CREATE TABLE tableaux (
