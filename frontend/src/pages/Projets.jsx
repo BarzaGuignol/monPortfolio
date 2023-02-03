@@ -4,7 +4,6 @@ import ProjetCarte from "@components/ProjetCarte";
 import apiConnexion from "../services/apiConnexion";
 
 export default function Projets() {
-
   const [mesProjets, setMesProjets] = useState();
 
   useEffect(() => {
@@ -18,9 +17,11 @@ export default function Projets() {
 
   return (
     <div className="min-h-screen bg-[#21618C]">
-      <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">Mes projets</h2>
+      <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">
+        Mes projets
+      </h2>
       <div className="flex flex-col sm:grid sm:grid-cols-3 gap-y-20 w-4/5 mx-auto text-center justify-center mt-20 pb-20">
-      {mesProjets?.map((data) => (
+        {mesProjets?.map((data) => (
           <ProjetCarte key={data.id} data={data} />
         ))}
       </div>
