@@ -1,39 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import apiConnexion from "../services/apiConnexion";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-export default function TableauCarte() {
+export default function TableauCarte({mesTableaux}) {
 
-  const [mesTableaux, setMesTableaux] = useState();
-  const n = Math.floor(Math.random() * mesTableaux.length);
-
-  useEffect(() => {
-    apiConnexion
-      .get(`tableaux`)
-      .then((res) => {
-        setMesTableaux(res.data);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+  // const n = Math.floor(Math.random() * mesTableaux.length);
 
   const slides = [
     {
-      url: `${mesTableaux[n].url_image}`,
+      url: `https://www.kazoart.com/blog/wp-content/uploads/2017/03/van-gogh-la-nuit-etoilee-1.jpg`,
     },
     {
-      url: `${mesTableaux[n].url_image}`,
+      url: `https://www.infochretienne.com/wp-content/uploads/2019/07/Sans-titre-1-69-1200x600.jpg`,
     },
     {
-      url: `${mesTableaux[n].url_image}`,
-    },
-
-    {
-      url: `${mesTableaux[n].url_image}`,
+      url: `https://cms.guggenheim-bilbao.eus/uploads/2020/09/composition-8.jpg`,
     },
     {
-      url: `${mesTableaux[n].url_image}`,
+      url: `https://upload.wikimedia.org/wikipedia/commons/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg`,
+    },
+    {
+      url: `https://upload.wikimedia.org/wikipedia/commons/3/3e/Irises-Vincent_van_Gogh.jpg`,
     },
   ];
 
@@ -79,6 +67,7 @@ export default function TableauCarte() {
             <RxDotFilled />
           </div>
         ))}
+        
       </div>
     </div>
   )
