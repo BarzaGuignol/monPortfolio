@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function ProjetCarte({ data }) {
+export default function LivreCarte({ data }) {
   return (
     <div className="flex flex-col w-[200px] h-[400px] mb-20 space-x-12">
       <div className="h-20 mb-8">
@@ -15,7 +15,6 @@ export default function ProjetCarte({ data }) {
           className="text-[#1C2833] border-4 border-[#1C2833] rounded-lg"
         />
       </div>
-      
 
       {data.url_boutique ? (
         <div className="flex flex-row justify-center">

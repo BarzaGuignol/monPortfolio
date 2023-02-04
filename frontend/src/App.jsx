@@ -7,8 +7,8 @@ import Passion from "@pages/Passion";
 import Contact from "@pages/Contact";
 import Mystere from "@pages/Mystere";
 import Footer from "@components/Footer";
-import Accueil from "./pages/Accueil";
 import APITableaux from "@pages/APITableaux";
+import Accueil from "./pages/Accueil";
 
 import "./App.css";
 

@@ -16,7 +16,7 @@ router.delete("/items/:id", itemControllers.destroy);
 
 router.get("/experiences", CvControllers.browse);
 router.get("/projets", ProjetsControllers.browse);
-router.get("/livres", LivresControllers.browse)
+router.get("/livres", LivresControllers.browse);
 router.get("/tableaux", TableauxControllers.browse);
 
 module.exports = router;
