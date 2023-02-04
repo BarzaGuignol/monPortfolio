@@ -197,16 +197,16 @@ VALUES (
 CREATE TABLE
     livres (
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        titre VARCHAR(255) NOT NULL,
-        url_image VARCHAR(255) NOT NULL,
+        titreLivre VARCHAR(255) NOT NULL,
+        imageLivre VARCHAR(255) NOT NULL,
         url_boutique VARCHAR(255)
     );
 
 INSERT INTO
     livres (
         id,
-        titre,
-        url_image,
+        titreLivre,
+        imageLivre,
         url_boutique
     )
 VALUES (

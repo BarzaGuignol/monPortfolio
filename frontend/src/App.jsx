@@ -7,6 +7,7 @@ import Passion from "@pages/Passion";
 import Contact from "@pages/Contact";
 import Mystere from "@pages/Mystere";
 import Footer from "@components/Footer";
+import APITableaux from "@pages/APITableaux";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/passion" element={<Passion />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mystere" element={<Mystere />} />
+          <Route path="/tableaux" element={<APITableaux />} />
         </Routes>
         <Footer />
       </Router>
