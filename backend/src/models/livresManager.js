@@ -10,6 +10,20 @@ class ItemManager extends AbstractManager {
     const value = [];
     return this.connection.query(query, value);
   }
+
+  insert(livre) {
+    return this.connection.query(
+      `insert into ${this.table} (titreLivre, imageLivre, url_boutique) values (?, ?, ?)`,
+      [livre.titre, livre.urlImage, livre.urlBoutique]
+    );
+  }
+
+  update(livre) {
+    return this.connection.query(
+      `update ${this.table} set titreLivre = ?, imageLivre = ?, url_boutique = ? where id = ?`,
+      [livre.titreLivre, livre.imageLivre, livre.url_boutique, livre.id]
+    );
+  }
 }
 
 module.exports = ItemManager;
