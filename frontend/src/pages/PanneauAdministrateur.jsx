@@ -13,10 +13,30 @@ export default function PanneauAdministrateur() {
       </h2>
       <div className="flex flex-row mt-20 text-center justify-center space-x-8">
         <h2 className="text-2xl text-[#1C2833]">Modifier / Supprimer : </h2>
-        <Link to="/bundle/curriculumvitae" className="text-2xl text-[#3498DB] hover:text-[#FFC300]">CV</Link>
-        <Link to="/bundle/projets" className="text-2xl text-[#3498DB] hover:text-[#FFC300]">Projets</Link>
-        <Link to="/bundle/passion" className="text-2xl text-[#3498DB] hover:text-[#FFC300]">Ecrits</Link>
-        <Link to="/bundle/tableaux" className="text-2xl text-[#3498DB] hover:text-[#FFC300]">Tableaux</Link>
+        <Link
+          to="/bundle/curriculumvitae"
+          className="text-2xl text-[#3498DB] hover:text-[#FFC300]"
+        >
+          CV
+        </Link>
+        <Link
+          to="/bundle/projets"
+          className="text-2xl text-[#3498DB] hover:text-[#FFC300]"
+        >
+          Projets
+        </Link>
+        <Link
+          to="/bundle/passion"
+          className="text-2xl text-[#3498DB] hover:text-[#FFC300]"
+        >
+          Ecrits
+        </Link>
+        <Link
+          to="/bundle/tableaux"
+          className="text-2xl text-[#3498DB] hover:text-[#FFC300]"
+        >
+          Tableaux
+        </Link>
       </div>
       <div className="flex flex-row pb-20">
         <div className="w-1/3 boder-r-4 border-[#FFC300]">

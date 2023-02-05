@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import ProjetCarte from "@components/ProjetCarte";
-import apiConnexion from "../services/apiConnexion";
 import ProjetCarteAdmin from "@components/ProjetCarteAdmin";
+import apiConnexion from "../services/apiConnexion";
 
 export default function ProjetsAdmin() {
   const [mesProjets, setMesProjets] = useState();
@@ -36,7 +35,11 @@ export default function ProjetsAdmin() {
       </h2>
       <div className="flex flex-col sm:grid sm:grid-cols-3 gap-y-20 w-4/5 mx-auto text-center justify-center mt-20 pb-20">
         {mesProjets?.map((data) => (
-          <ProjetCarteAdmin key={data.id} data={data} supprimerProjet={supprimerProjet} />
+          <ProjetCarteAdmin
+            key={data.id}
+            data={data}
+            supprimerProjet={supprimerProjet}
+          />
         ))}
       </div>
     </div>

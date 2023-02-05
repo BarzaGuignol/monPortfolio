@@ -39,12 +39,12 @@ export default function APITableauxAdmin() {
               <h2 className="text-center text-4xl font-bold text-[#FFC300] pt-20 mb-20">
                 {tableau.titre}
                 <button
-              className="ml-8 font-bold text-xl text-red-900"
-              type="button"
-              onClick={() => supprimerTableau(tableau)}
-            >
-              X
-            </button>
+                  className="ml-8 font-bold text-xl text-red-900"
+                  type="button"
+                  onClick={() => supprimerTableau(tableau)}
+                >
+                  X
+                </button>
               </h2>
               <div className="flex flex-row border-b-4 border-[#FFC300] pb-20 w-[80%] mx-auto">
                 <div className="w-1/2">

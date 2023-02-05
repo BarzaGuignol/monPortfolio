@@ -31,7 +31,10 @@ function App() {
           <Route path="/mystere" element={<Mystere />} />
           <Route path="/tableaux" element={<APITableaux />} />
           <Route path="/bundle" element={<PanneauAdministrateur />} />
-          <Route path="/bundle/curriculumvitae" element={<CurriculumVitaeAdmin />} />
+          <Route
+            path="/bundle/curriculumvitae"
+            element={<CurriculumVitaeAdmin />}
+          />
           <Route path="/bundle/projets" element={<ProjetsAdmin />} />
           <Route path="/bundle/passion" element={<PassionAdmin />} />
           <Route path="/bundle/tableaux" element={<APITableauxAdmin />} />

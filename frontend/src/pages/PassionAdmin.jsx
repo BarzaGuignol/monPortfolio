@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import TableauCarte from "@components/TableauCarte";
-import apiConnexion from "../services/apiConnexion";
 import LivreCarteAdmin from "@components/LivreCarteAdmin";
+import apiConnexion from "../services/apiConnexion";
 
 export default function PassionAdmin() {
   const [mesLivres, setMesLivres] = useState();
@@ -37,7 +37,11 @@ export default function PassionAdmin() {
       </h2>
       <div className="flex flex-col sm:flex sm:flex-row sm:space-x-20 w-4/5 mx-auto text-center justify-center mt-20 pb-20">
         {mesLivres?.map((data) => (
-          <LivreCarteAdmin key={data.id} data={data} supprimerLivre={supprimerLivre} />
+          <LivreCarteAdmin
+            key={data.id}
+            data={data}
+            supprimerLivre={supprimerLivre}
+          />
         ))}
       </div>
       <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">

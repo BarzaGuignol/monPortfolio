@@ -5,14 +5,16 @@ import React from "react";
 export default function ProjetCarteAdmin({ data, supprimerProjet }) {
   return (
     <div className="flex flex-col">
-      <h2 className="text-2xl text-[#FFC300] font-bold mb-2">{data.titre}
-            <button
-              className="ml-8 font-bold text-xl text-red-900"
-              type="button"
-              onClick={() => supprimerProjet(data)}
-            >
-              X
-            </button></h2>
+      <h2 className="text-2xl text-[#FFC300] font-bold mb-2">
+        {data.titre}
+        <button
+          className="ml-8 font-bold text-xl text-red-900"
+          type="button"
+          onClick={() => supprimerProjet(data)}
+        >
+          X
+        </button>
+      </h2>
       <img
         src={data.url_image}
         alt={data.titre}

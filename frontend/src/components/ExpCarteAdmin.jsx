@@ -39,12 +39,12 @@ export default function ExpCarteAdmin({ data, supprimerExp }) {
             <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">
               {data.titre}
               <button
-              className="ml-8 font-bold text-xl text-red-900"
-              type="button"
-              onClick={() => supprimerExp(data)}
-            >
-              X
-            </button>
+                className="ml-8 font-bold text-xl text-red-900"
+                type="button"
+                onClick={() => supprimerExp(data)}
+              >
+                X
+              </button>
             </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
           </div>
@@ -55,12 +55,12 @@ export default function ExpCarteAdmin({ data, supprimerExp }) {
             <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">
               {data.titre}
               <button
-              className="ml-8 font-bold text-xl text-red-900"
-              type="button"
-              onClick={() => supprimerExp(data)}
-            >
-              X
-            </button>
+                className="ml-8 font-bold text-xl text-red-900"
+                type="button"
+                onClick={() => supprimerExp(data)}
+              >
+                X
+              </button>
             </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
           </div>

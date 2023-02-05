@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import ExpCarteResponsive from "@components/ExpCarteResponsive";
+import ExpCarteAdmin from "@components/ExpCarteAdmin";
+import ExpCarteResponsiveAdmin from "@components/ExpCarteResponsiveAdmin";
 import apiConnexion from "../services/apiConnexion";
 
 import "./CurriculumVitae.css";
-import ExpCarteAdmin from "@components/ExpCarteAdmin";
-import ExpCarteResponsiveAdmin from "@components/ExpCarteResponsiveAdmin";
 
 export default function CurriculumVitaeAdmin() {
   const [expData, setExpData] = useState();
@@ -47,12 +46,20 @@ export default function CurriculumVitaeAdmin() {
       </div>
       <div className="hidden sm:block pb-20">
         {expData?.map((data) => (
-          <ExpCarteAdmin key={data.id} data={data} supprimerExp={supprimerExp} />
+          <ExpCarteAdmin
+            key={data.id}
+            data={data}
+            supprimerExp={supprimerExp}
+          />
         ))}
       </div>
       <div className="sm:hidden pb-20">
         {expData?.map((data) => (
-          <ExpCarteResponsiveAdmin key={data.id} data={data} supprimerExp={supprimerExp} />
+          <ExpCarteResponsiveAdmin
+            key={data.id}
+            data={data}
+            supprimerExp={supprimerExp}
+          />
         ))}
       </div>
     </div>

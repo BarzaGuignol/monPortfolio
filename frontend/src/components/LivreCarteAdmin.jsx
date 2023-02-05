@@ -6,13 +6,16 @@ export default function LivreCarteAdmin({ data, supprimerLivre }) {
   return (
     <div className="flex flex-col w-[200px] h-[400px] mb-20 space-x-12">
       <div className="h-20 mb-8">
-        <h2 className="text-2xl text-[#FFC300] font-bold">{data.titreLivre}<button
-              className="ml-8 font-bold text-xl text-red-900"
-              type="button"
-              onClick={() => supprimerLivre(data)}
-            >
-              X
-            </button></h2>
+        <h2 className="text-2xl text-[#FFC300] font-bold">
+          {data.titreLivre}
+          <button
+            className="ml-8 font-bold text-xl text-red-900"
+            type="button"
+            onClick={() => supprimerLivre(data)}
+          >
+            X
+          </button>
+        </h2>
       </div>
       <div className="">
         <img
