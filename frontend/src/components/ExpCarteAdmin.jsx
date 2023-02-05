@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ExpCarteAdmin({ data, supprimerExp }) {
   return (
@@ -47,6 +48,9 @@ export default function ExpCarteAdmin({ data, supprimerExp }) {
               </button>
             </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
+            <div className="mt-8 text-[#FFC300]">
+              <Link to={`/bundle/curriculumvitae/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+            </div>
           </div>
         </div>
       ) : (
@@ -63,6 +67,9 @@ export default function ExpCarteAdmin({ data, supprimerExp }) {
               </button>
             </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
+            <div className="mt-8 text-[#FFC300]">
+              <Link to={`/bundle/curriculumvitae/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+            </div>
           </div>
 
           <div className="w-1/5">

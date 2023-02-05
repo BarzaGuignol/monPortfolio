@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import apiConnexion from "../services/apiConnexion";
 
@@ -70,6 +71,9 @@ export default function APITableauxAdmin() {
                   <p className="w-[80%] mx-auto text-[#3498DB] font-bold">
                     {tableau.description}
                   </p>
+                  <div className="w-[80%] mx-auto mt-20 text-[#FFC300]">
+                  <Link to={`/bundle/tableaux/${tableau.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+                  </div>
                 </div>
               </div>
             </div>

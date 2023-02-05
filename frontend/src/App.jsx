@@ -14,8 +14,13 @@ import APITableaux from "@pages/APITableaux";
 import APITableauxAdmin from "@pages/APITableauxAdmin";
 import PanneauAdministrateur from "@pages/PanneauAdministrateur";
 import Accueil from "./pages/Accueil";
+import CurriculumVitaeUni from "@pages/CurriculumVitaeUni";
+import EcritsUni from "@pages/EcritsUni";
+import APITableauxUni from "@pages/APITableauxUni";
+import ProjetsUni from "@pages/ProjetsUni";
 
 import "./App.css";
+
 
 function App() {
   return (
@@ -38,6 +43,13 @@ function App() {
           <Route path="/bundle/projets" element={<ProjetsAdmin />} />
           <Route path="/bundle/passion" element={<PassionAdmin />} />
           <Route path="/bundle/tableaux" element={<APITableauxAdmin />} />
+          <Route
+            path="/bundle/curriculumvitae/:id"
+            element={<CurriculumVitaeUni />}
+          />
+          <Route path="/bundle/projets/:id" element={<ProjetsUni />} />
+          <Route path="/bundle/ecrits/:id" element={<EcritsUni />} />
+          <Route path="/bundle/tableaux/:id" element={<APITableauxUni />} />
         </Routes>
         <Footer />
       </Router>

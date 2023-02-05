@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LivreCarteAdmin({ data, supprimerLivre }) {
   return (
@@ -37,6 +38,9 @@ export default function LivreCarteAdmin({ data, supprimerLivre }) {
           </a>
         </div>
       ) : null}
+      <div className="mt-8 text-[#FFC300]">
+        <Link to={`/bundle/ecrits/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+      </div>
     </div>
   );
 }
