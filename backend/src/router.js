@@ -35,5 +35,7 @@ router.get("/projets/:id", ProjetsControllers.read)
 router.put("/projets/:id", ProjetsControllers.edit);
 router.get("/experiences/:id", CvControllers.read)
 router.put("/experiences/:id", CvControllers.edit);
+router.get("/livres/:id", LivresControllers.read)
+router.put("/livres/:id", LivresControllers.edit);
 
 module.exports = router;
