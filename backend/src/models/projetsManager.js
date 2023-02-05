@@ -23,6 +23,20 @@ class ItemManager extends AbstractManager {
       ]
     );
   }
+
+  update(projet) {
+    return this.connection.query(
+      `update ${this.table} set titre = ?, url_image = ?, description = ?, url_github = ?, url_site = ? where id = ?`,
+      [
+        projet.titre,
+        projet.url_image,
+        projet.description,
+        projet.url_github,
+        projet.url_site,
+        projet.id,
+      ]
+    );
+  }
 }
 
 module.exports = ItemManager;

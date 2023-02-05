@@ -29,4 +29,11 @@ router.delete("/projets/:id", ProjetsControllers.destroy);
 router.delete("/livres/:id", LivresControllers.destroy);
 router.delete("/tableaux/:id", TableauxControllers.destroy);
 
+router.get("/tableaux/:id", TableauxControllers.read)
+router.put("/tableaux/:id", TableauxControllers.edit);
+router.get("/projets/:id", ProjetsControllers.read)
+router.put("/projets/:id", ProjetsControllers.edit);
+router.get("/experiences/:id", CvControllers.read)
+router.put("/experiences/:id", CvControllers.edit);
+
 module.exports = router;

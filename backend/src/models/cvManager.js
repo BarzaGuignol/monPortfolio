@@ -27,6 +27,22 @@ class ItemManager extends AbstractManager {
       ]
     );
   }
+
+  update(experience) {
+    return this.connection.query(
+      `update ${this.table} set titre = ?, dateDebut = ?, dateFin = ?, description = ?, url_image = ?, impairOuPair = ?, competences_id = ? where id = ?`,
+      [
+        experience.titre,
+        experience.dateDebut,
+        experience.dateFin,
+        experience.description,
+        experience.url_image,
+        experience.impairOuPair,
+        experience.competences_id,
+        experience.id,
+      ]
+    );
+  }
 }
 
 module.exports = ItemManager;
