@@ -14,11 +14,7 @@ class ItemManager extends AbstractManager {
   insert(livre) {
     return this.connection.query(
       `insert into ${this.table} (titreLivre, imageLivre, url_boutique) values (?, ?, ?)`,
-      [
-        livre.titre,
-        livre.urlImage,
-        livre.urlBoutique
-      ]
+      [livre.titre, livre.urlImage, livre.urlBoutique]
     );
   }
 }

@@ -21,7 +21,7 @@ class ItemManager extends AbstractManager {
         tableau.auteur,
         tableau.description,
         tableau.date,
-        tableau.urlImage
+        tableau.urlImage,
       ]
     );
   }

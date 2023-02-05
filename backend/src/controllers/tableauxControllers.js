@@ -28,5 +28,5 @@ const add = (req, res) => {
 
 module.exports = {
   browse,
-  add
+  add,
 };

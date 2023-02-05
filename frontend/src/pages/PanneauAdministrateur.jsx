@@ -10,12 +10,8 @@ export default function PanneauAdministrateur() {
       <div className="w-1/3 boder-r-4 border-[#FFC300]">
         <AjoutExp />
       </div>
-      <div className="w-1/3">
-
-      </div>
-      <div className="w-1/3">
-
-      </div>
+      <div className="w-1/3" />
+      <div className="w-1/3" />
     </div>
-  )
+  );
 }

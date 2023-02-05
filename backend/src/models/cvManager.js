@@ -23,11 +23,10 @@ class ItemManager extends AbstractManager {
         experience.description,
         experience.urlImage,
         experience.impairOuPair,
-        experience.competencesId
+        experience.competencesId,
       ]
     );
   }
-
 }
 
 module.exports = ItemManager;

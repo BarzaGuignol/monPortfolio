@@ -19,7 +19,7 @@ class ItemManager extends AbstractManager {
         projet.urlImage,
         projet.description,
         projet.urlGithub,
-        projet.urlSite
+        projet.urlSite,
       ]
     );
   }
