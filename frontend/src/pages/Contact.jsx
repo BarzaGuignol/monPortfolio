@@ -86,36 +86,38 @@ export default function Contact() {
           </button>
         </form>
       </div>
-      <div className="sm:w-1/2 w-[90%] mx-auto pb-20 sm:pb-0 my-20 space-y-8 sm:border-l-4 sm:border-[#FFC300] sm:border-b-0 border-b-4 border-[#FFC300]">
+      <div className="sm:w-1/2 text-center w-[90%] mx-auto pb-20 sm:pb-0 my-20 space-y-8 sm:border-l-4 sm:border-[#FFC300] sm:border-b-0 border-b-4 border-[#FFC300]">
         <h2 className="text-[#3498DB] text-4xl underline underline-offset-8 decoration-[#FFC300] w-[50%] mx-auto pb-20">
           Mes liens
         </h2>
-        <a
-          href="https://github.com/BarzaGuignol"
-          target="_blank"
-          className="flex flex-row space-between text-2xl text-[#FFC300] w-[50%] mx-auto"
-          rel="noreferrer"
-        >
-          Lien Github :{" "}
-          <img
-            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-            alt="logo github"
-            className="ml-4 w-10 h-10 rounded lg"
-          />
-        </a>
-        <a
-          href="https://github.com/BarzaGuignol"
-          target="_blank"
-          className="flex flex-row space-between text-2xl text-[#FFC300] w-[50%] mx-auto"
-          rel="noreferrer"
-        >
-          Lien LinkedIn :{" "}
-          <img
-            src="https://e7.pngegg.com/pngimages/297/542/png-clipart-linkedin-linkedin.png"
-            alt="logo linkedin"
-            className="ml-4 w-10 h-10 rounded-lg"
-          />
-        </a>
+        <div className="flex flex-row w-[50%] mx-auto">
+          <a
+            href="https://github.com/BarzaGuignol"
+            target="_blank"
+            className="flex flex-col space-between text-2xl text-[#FFC300] w-[50%] mx-auto"
+            rel="noreferrer"
+          >
+            <img
+              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              alt="logo github"
+              className="w-20 h-20 rounded lg mb-8 mx-auto"
+            />
+            Github
+          </a>
+          <a
+            href="https://github.com/BarzaGuignol"
+            target="_blank"
+            className="flex flex-col space-between text-2xl text-[#FFC300] w-[50%] mx-auto"
+            rel="noreferrer"
+          >
+            <img
+              src="https://e7.pngegg.com/pngimages/297/542/png-clipart-linkedin-linkedin.png"
+              alt="logo linkedin"
+              className="w-20 h-20 rounded-lg mb-8 mx-auto"
+            />
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );
