@@ -12,6 +12,21 @@ const browse = (req, res) => {
     });
 };
 
+const add = (req, res) => {
+  const projet = req.body;
+
+  models.projets
+    .insert(projet)
+    .then(([result]) => {
+      res.location(`/projets/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   browse,
+  add,
 };

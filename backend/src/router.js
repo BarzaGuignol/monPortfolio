@@ -19,4 +19,9 @@ router.get("/projets", ProjetsControllers.browse);
 router.get("/livres", LivresControllers.browse);
 router.get("/tableaux", TableauxControllers.browse);
 
+router.post("/experiences", CvControllers.add);
+router.post("/projets", ProjetsControllers.add);
+router.post("/livres", LivresControllers.add);
+router.post("/tableaux", TableauxControllers.add);
+
 module.exports = router;

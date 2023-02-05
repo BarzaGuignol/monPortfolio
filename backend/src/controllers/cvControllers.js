@@ -12,6 +12,21 @@ const browse = (req, res) => {
     });
 };
 
+const add = (req, res) => {
+  const experience = req.body;
+
+  models.experiences
+    .insert(experience)
+    .then(([result]) => {
+      res.location(`/experiences/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   browse,
+  add,
 };
