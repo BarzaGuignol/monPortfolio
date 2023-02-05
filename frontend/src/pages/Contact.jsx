@@ -105,7 +105,7 @@ export default function Contact() {
             Github
           </a>
           <a
-            href="https://github.com/BarzaGuignol"
+            href="https://www.linkedin.com/in/yanis-viot/"
             target="_blank"
             className="flex flex-col space-between text-2xl text-[#FFC300] w-[50%] mx-auto"
             rel="noreferrer"

@@ -8,6 +8,7 @@ import Contact from "@pages/Contact";
 import Mystere from "@pages/Mystere";
 import Footer from "@components/Footer";
 import APITableaux from "@pages/APITableaux";
+import PanneauAdministrateur from "@pages/PanneauAdministrateur";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/mystere" element={<Mystere />} />
           <Route path="/tableaux" element={<APITableaux />} />
+          <Route path="/bundle" element={<PanneauAdministrateur />} />
         </Routes>
         <Footer />
       </Router>
