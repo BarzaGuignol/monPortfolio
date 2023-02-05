@@ -31,7 +31,7 @@ export default function APITableaux() {
                   <img
                     src={tableau.url_image}
                     alt={tableau.titre}
-                    className="w-[80%] max-h-[600px] mx-auto"
+                    className="min-w-400px max-h-[600px] mx-auto"
                   />
                 </div>
                 <div className="w-1/2">
@@ -45,7 +45,7 @@ export default function APITableaux() {
                     {tableau.auteur}
                   </h3>
                   <h3 className="w-[80%] mx-auto mb-2 text-[#FFC300]">
-                    {tableau.date}
+                    {tableau.date ? tableau.date : "Date inconnue"}
                   </h3>
                   <p className="w-[80%] mx-auto text-[#3498DB] font-bold">
                     {tableau.description}
