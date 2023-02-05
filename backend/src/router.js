@@ -24,4 +24,9 @@ router.post("/projets", ProjetsControllers.add);
 router.post("/livres", LivresControllers.add);
 router.post("/tableaux", TableauxControllers.add);
 
+router.delete("/experiences/:id", CvControllers.destroy);
+router.delete("/projets/:id", ProjetsControllers.destroy);
+router.delete("/livres/:id", LivresControllers.destroy);
+router.delete("/tableaux/:id", TableauxControllers.destroy);
+
 module.exports = router;
