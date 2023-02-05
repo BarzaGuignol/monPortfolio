@@ -13,11 +13,10 @@ export default function PanneauAdministrateur() {
           <AjoutExp />
         </div>
         <div className="w-1/3">
-        <AjoutProjet />
+          <AjoutProjet />
         </div>
         <div className="w-1/3" />
       </div>
-
     </div>
   );
 }
