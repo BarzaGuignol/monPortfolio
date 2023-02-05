@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable camelcase */
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
@@ -33,7 +36,7 @@ export default function EcritsUni() {
         imageLivre,
         url_boutique,
       })
-      .then((res)=> {
+      .then(() => {
         setTimeout(() => navigate("/bundle/passion"), 1500);
       })
       .catch((error) => console.error(error));
@@ -55,22 +58,22 @@ export default function EcritsUni() {
               {monLivre.titreLivre}
             </h2>
             <a
-            href={monLivre.url_boutique}
-            target="_blank"
-            className="bg-transparent text-[#FFC300] font-bold border-2 border-[#FFC300] mt-12 p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-            rel="noreferrer"
-          >
-            Lien Boutique
-          </a>
+              href={monLivre.url_boutique}
+              target="_blank"
+              className="bg-transparent text-[#FFC300] font-bold border-2 border-[#FFC300] mt-12 p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+              rel="noreferrer"
+            >
+              Lien Boutique
+            </a>
           </div>
         </div>
       </div>
       <div className="w-[80%] pb-20 mx-auto">
         <form
-        className="flex flex-col sm:w-[50%] mx-auto pb-20 sm:pb-0 sm:mt-8"
-        onSubmit={(e) => gestionModificationLivre(e)}
+          className="flex flex-col sm:w-[50%] mx-auto pb-20 sm:pb-0 sm:mt-8"
+          onSubmit={(e) => gestionModificationLivre(e)}
         >
-        <label className="text-2xl text-[#FFC300] mb-2 font-bold">
+          <label className="text-2xl text-[#FFC300] mb-2 font-bold">
             Titre de l'oeuvre :
           </label>
           <input
@@ -111,23 +114,24 @@ export default function EcritsUni() {
             }
             className="p-2 mb-8 rounded-md bg-slate-300 text-[#1C2833]"
           />
-        
-        <div className="flex flex-row space-x-2">
-          <Link to="/bundle/passion"
-            type="submit"
-            className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-          >
-            Annuler modification
-          </Link>
-          <button
-            type="submit"
-            className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-          >
-            Valider modification
-          </button>
+
+          <div className="flex flex-row space-x-2">
+            <Link
+              to="/bundle/passion"
+              type="submit"
+              className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            >
+              Annuler modification
+            </Link>
+            <button
+              type="submit"
+              className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            >
+              Valider modification
+            </button>
           </div>
-          </form>
+        </form>
       </div>
     </div>
-  )
+  );
 }

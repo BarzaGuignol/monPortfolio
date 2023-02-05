@@ -72,7 +72,12 @@ export default function APITableauxAdmin() {
                     {tableau.description}
                   </p>
                   <div className="w-[80%] mx-auto mt-20 text-[#FFC300]">
-                  <Link to={`/bundle/tableaux/${tableau.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+                    <Link
+                      to={`/bundle/tableaux/${tableau.id}`}
+                      className="p-2 hover:border-2 hover:border-[#FFC300]"
+                    >
+                      Modifier
+                    </Link>
                   </div>
                 </div>
               </div>

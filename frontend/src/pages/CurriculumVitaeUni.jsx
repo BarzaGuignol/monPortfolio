@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable camelcase */
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
@@ -25,7 +28,15 @@ export default function CurriculumVitaeUni() {
 
   const gestionModificationCV = (e) => {
     e.preventDefault();
-    const { titre, dateDebut, dateFin, description, url_image, impairOuPair, competences_id } = monCV;
+    const {
+      titre,
+      dateDebut,
+      dateFin,
+      description,
+      url_image,
+      impairOuPair,
+      competences_id,
+    } = monCV;
 
     apiConnexion
       .put(`experiences/${monCV.id}`, {
@@ -37,7 +48,7 @@ export default function CurriculumVitaeUni() {
         impairOuPair,
         competences_id,
       })
-      .then((res) => {
+      .then(() => {
         setTimeout(() => navigate("/bundle/curriculumvitae"), 1500);
       })
       .catch((error) => console.error(error));
@@ -61,7 +72,9 @@ export default function CurriculumVitaeUni() {
               {monCV.description}
             </p>
             <p className="w-[80%] text-2xl mx-auto text-[#FFC300] font-bold my-8">
-              {monCV.dateDebut ? monCV.dateDebut - monCV.dateFin : monCV.dateFin}
+              {monCV.dateDebut
+                ? monCV.dateDebut - monCV.dateFin
+                : monCV.dateFin}
             </p>
             <p className="w-[80%] mx-auto text-[#3498DB] font-bold">
               Impair ou Pair : {monCV.impairOuPair}
@@ -173,21 +186,22 @@ export default function CurriculumVitaeUni() {
             className="p-2 mb-8 rounded-md bg-slate-300 text-[#1C2833]"
           />
           <div className="flex flex-row space-x-2">
-          <Link to="/bundle/curriculumvitae"
-            type="submit"
-            className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-          >
-            Annuler modification
-          </Link>
-          <button
-            type="submit"
-            className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-          >
-            Valider modification
-          </button>
+            <Link
+              to="/bundle/curriculumvitae"
+              type="submit"
+              className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            >
+              Annuler modification
+            </Link>
+            <button
+              type="submit"
+              className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            >
+              Valider modification
+            </button>
           </div>
         </form>
       </div>
     </div>
-  )
+  );
 }

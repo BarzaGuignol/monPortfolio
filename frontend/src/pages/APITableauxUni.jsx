@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable camelcase */
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
@@ -25,7 +28,8 @@ export default function APITableauxUni() {
 
   const gestionModificationTableau = (e) => {
     e.preventDefault();
-    const { auteur, date, description, style, titre, type, url_image } = monTableau;
+    const { auteur, date, description, style, titre, type, url_image } =
+      monTableau;
 
     apiConnexion
       .put(`tableaux/${monTableau.id}`, {
@@ -35,9 +39,9 @@ export default function APITableauxUni() {
         style,
         titre,
         type,
-        url_image
+        url_image,
       })
-      .then((res)=> {
+      .then(() => {
         setTimeout(() => navigate("/bundle/tableaux"), 1500);
       })
       .catch((error) => console.error(error));
@@ -179,21 +183,22 @@ export default function APITableauxUni() {
             className="p-2 mb-8 rounded-md bg-slate-300 text-[#1C2833]"
           />
           <div className="flex flex-row space-x-2">
-          <Link to="/bundle/tableaux"
-            type="submit"
-            className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-          >
-            Annuler modification
-          </Link>
-          <button
-            type="submit"
-            className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-          >
-            Valider modification
-          </button>
+            <Link
+              to="/bundle/tableaux"
+              type="submit"
+              className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            >
+              Annuler modification
+            </Link>
+            <button
+              type="submit"
+              className="w-1/2 bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            >
+              Valider modification
+            </button>
           </div>
         </form>
       </div>
     </div>
-  )
+  );
 }

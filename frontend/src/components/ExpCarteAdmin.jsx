@@ -49,7 +49,12 @@ export default function ExpCarteAdmin({ data, supprimerExp }) {
             </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
             <div className="mt-8 text-[#FFC300]">
-              <Link to={`/bundle/curriculumvitae/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+              <Link
+                to={`/bundle/curriculumvitae/${data.id}`}
+                className="p-2 hover:border-2 hover:border-[#FFC300]"
+              >
+                Modifier
+              </Link>
             </div>
           </div>
         </div>
@@ -68,7 +73,12 @@ export default function ExpCarteAdmin({ data, supprimerExp }) {
             </p>
             <p className="text-2xl text-[#1C2833]">{data.description}</p>
             <div className="mt-8 text-[#FFC300]">
-              <Link to={`/bundle/curriculumvitae/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+              <Link
+                to={`/bundle/curriculumvitae/${data.id}`}
+                className="p-2 hover:border-2 hover:border-[#FFC300]"
+              >
+                Modifier
+              </Link>
             </div>
           </div>
 

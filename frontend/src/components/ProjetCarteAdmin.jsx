@@ -54,7 +54,12 @@ export default function ProjetCarteAdmin({ data, supprimerProjet }) {
         </div>
       )}
       <div className="mt-8 text-[#FFC300]">
-        <Link to={`/bundle/projets/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+        <Link
+          to={`/bundle/projets/${data.id}`}
+          className="p-2 hover:border-2 hover:border-[#FFC300]"
+        >
+          Modifier
+        </Link>
       </div>
     </div>
   );

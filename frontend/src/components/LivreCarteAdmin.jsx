@@ -39,7 +39,12 @@ export default function LivreCarteAdmin({ data, supprimerLivre }) {
         </div>
       ) : null}
       <div className="mt-8 text-[#FFC300]">
-        <Link to={`/bundle/ecrits/${data.id}`} className="p-2 hover:border-2 hover:border-[#FFC300]">Modifier</Link>
+        <Link
+          to={`/bundle/ecrits/${data.id}`}
+          className="p-2 hover:border-2 hover:border-[#FFC300]"
+        >
+          Modifier
+        </Link>
       </div>
     </div>
   );
