@@ -138,7 +138,7 @@ CREATE TABLE
     projets (
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         titre VARCHAR(255) NOT NULL,
-        url_image VARCHAR(255),
+        url_image VARCHAR(255) NOT NULL,
         description VARCHAR(500) NOT NULL,
         url_github VARCHAR(255) NOT NULL,
         url_site varchar(255)

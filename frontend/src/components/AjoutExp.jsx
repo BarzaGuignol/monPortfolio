@@ -26,7 +26,8 @@ export default function AjoutExp() {
     setExperience(nouvelleExp);
   };
 
-  const gestionAjoutExp = () => {
+  const gestionAjoutExp = (e) => {
+    e.preventDefault();
     apiConnexion
       .post(`experiences`, {
         ...experience,
@@ -59,7 +60,7 @@ export default function AjoutExp() {
         theme="dark"
       />
       <div className="bg-[#21618C]">
-        <form className="flex flex-col sm:w-[50%] mx-auto pb-20 sm:pb-0 sm:pt-20">
+        <form className="flex flex-col sm:w-[50%] mx-auto pb-20 sm:pb-0 sm:pt-20" onSubmit={(e) => gestionAjoutExp(e)}>
           <label className="text-2xl text-[#FFC300] mb-2 font-bold">
             Titre :
           </label>
@@ -148,8 +149,7 @@ export default function AjoutExp() {
             </button>
           )}
           <button
-            type="button"
-            onClick={gestionAjoutExp}
+            type="submit"
             className="bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
           >
             Ajouter nouvelle expérience
