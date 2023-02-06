@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,14 +10,14 @@ export default function Footer() {
         </p>
       </div>
       <div className="w-[80px] mx-auto mt-4">
-        <a
+        <Link
           className="text-[#FFC300]"
-          href="https://www.youtube.com/"
+          to="/lebalcon"
           target="_blank"
           rel="noreferrer"
         >
           Le balcon
-        </a>
+        </Link>
       </div>
     </footer>
   );
