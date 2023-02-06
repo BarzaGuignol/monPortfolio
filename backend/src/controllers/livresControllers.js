@@ -1,5 +1,7 @@
 const models = require("../models");
 
+const validate = require("../services/livres");
+
 const browse = (req, res) => {
   models.livres
     .findAll()
@@ -31,6 +33,8 @@ const read = (req, res) => {
 const add = (req, res) => {
   const livre = req.body;
 
+const error = validate(livre, "required");
+  if (!error) {
   models.livres
     .insert(livre)
     .then(([result]) => {
@@ -40,6 +44,9 @@ const add = (req, res) => {
       console.error(err);
       res.sendStatus(500);
     });
+  } else {
+    res.status(422).send(error);
+  }
 };
 
 const destroy = (req, res) => {
@@ -63,6 +70,10 @@ const edit = (req, res) => {
 
   livre.id = parseInt(req.params.id, 10);
 
+  const validation = validate(livre, "optional");
+  if (validation) {
+    res.status(422).send(validation);
+  } else {
   models.livres
     .update(livre)
     .then(([result]) => {
@@ -76,6 +87,7 @@ const edit = (req, res) => {
       console.error(err);
       res.sendStatus(500);
     });
+  }
 };
 
 module.exports = {

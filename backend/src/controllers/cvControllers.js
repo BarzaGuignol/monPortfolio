@@ -1,5 +1,7 @@
 const models = require("../models");
 
+const validate = require("../services/experiences");
+
 const browse = (req, res) => {
   models.experiences
     .findAll()
@@ -31,15 +33,21 @@ const read = (req, res) => {
 const add = (req, res) => {
   const experience = req.body;
 
-  models.experiences
-    .insert(experience)
-    .then(([result]) => {
-      res.location(`/experiences/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const error = validate(experience, "required");
+  if (!error) {
+    models.experiences
+      .insert(experience)
+      .then(([result]) => {
+        res.location(`/experiences/${result.insertId}`).sendStatus(201);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  } else {
+    res.status(422).send(error);
+  }
+
 };
 
 const destroy = (req, res) => {
@@ -63,6 +71,10 @@ const edit = (req, res) => {
 
   experience.id = parseInt(req.params.id, 10);
 
+  const validation = validate(experience, "optional");
+  if (validation) {
+    res.status(422).send(validation);
+  } else {
   models.experiences
     .update(experience)
     .then(([result]) => {
@@ -76,6 +88,7 @@ const edit = (req, res) => {
       console.error(err);
       res.sendStatus(500);
     });
+  }
 };
 
 module.exports = {

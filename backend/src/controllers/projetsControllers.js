@@ -1,5 +1,7 @@
 const models = require("../models");
 
+const validate = require("../services/projets");
+
 const browse = (req, res) => {
   models.projets
     .findAll()
@@ -31,6 +33,8 @@ const read = (req, res) => {
 const add = (req, res) => {
   const projet = req.body;
 
+  const error = validate(projet, "required");
+  if (!error) {
   models.projets
     .insert(projet)
     .then(([result]) => {
@@ -40,6 +44,9 @@ const add = (req, res) => {
       console.error(err);
       res.sendStatus(500);
     });
+  } else {
+    res.status(422).send(error);
+  }
 };
 
 const destroy = (req, res) => {
@@ -63,6 +70,10 @@ const edit = (req, res) => {
 
   projet.id = parseInt(req.params.id, 10);
 
+  const validation = validate(projet, "optional");
+  if (validation) {
+    res.status(422).send(validation);
+  } else {
   models.projets
     .update(projet)
     .then(([result]) => {
@@ -76,6 +87,7 @@ const edit = (req, res) => {
       console.error(err);
       res.sendStatus(500);
     });
+  }
 };
 
 module.exports = {
