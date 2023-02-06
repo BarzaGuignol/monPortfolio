@@ -22,7 +22,7 @@ export default function Passion() {
       <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">
         Mes écrits
       </h2>
-      <div className="flex flex-col sm:flex sm:flex-row sm:space-x-20 w-4/5 mx-auto text-center justify-center mt-20 pb-20">
+      <div className="flex flex-col sm:flex sm:flex-row w-[80%] mx-auto mt-20 pb-20">
         {mesLivres?.map((data) => (
           <LivreCarte key={data.id} data={data} />
         ))}
