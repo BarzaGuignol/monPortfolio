@@ -1,5 +1,7 @@
 const models = require("../models");
 
+const validate = require("../services/livres");
+
 const browse = (req, res) => {
   models.livres
     .findAll()
@@ -31,15 +33,20 @@ const read = (req, res) => {
 const add = (req, res) => {
   const livre = req.body;
 
-  models.livres
-    .insert(livre)
-    .then(([result]) => {
-      res.location(`/livres/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const error = validate(livre, "required");
+  if (!error) {
+    models.livres
+      .insert(livre)
+      .then(([result]) => {
+        res.location(`/livres/${result.insertId}`).sendStatus(201);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  } else {
+    res.status(422).send(error);
+  }
 };
 
 const destroy = (req, res) => {
@@ -63,19 +70,24 @@ const edit = (req, res) => {
 
   livre.id = parseInt(req.params.id, 10);
 
-  models.livres
-    .update(livre)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const validation = validate(livre, "optional");
+  if (validation) {
+    res.status(422).send(validation);
+  } else {
+    models.livres
+      .update(livre)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  }
 };
 
 module.exports = {

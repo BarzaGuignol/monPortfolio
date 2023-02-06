@@ -1,5 +1,7 @@
 const models = require("../models");
 
+const validate = require("../services/projets");
+
 const browse = (req, res) => {
   models.projets
     .findAll()
@@ -31,15 +33,20 @@ const read = (req, res) => {
 const add = (req, res) => {
   const projet = req.body;
 
-  models.projets
-    .insert(projet)
-    .then(([result]) => {
-      res.location(`/projets/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const error = validate(projet, "required");
+  if (!error) {
+    models.projets
+      .insert(projet)
+      .then(([result]) => {
+        res.location(`/projets/${result.insertId}`).sendStatus(201);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  } else {
+    res.status(422).send(error);
+  }
 };
 
 const destroy = (req, res) => {
@@ -63,19 +70,24 @@ const edit = (req, res) => {
 
   projet.id = parseInt(req.params.id, 10);
 
-  models.projets
-    .update(projet)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const validation = validate(projet, "optional");
+  if (validation) {
+    res.status(422).send(validation);
+  } else {
+    models.projets
+      .update(projet)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  }
 };
 
 module.exports = {

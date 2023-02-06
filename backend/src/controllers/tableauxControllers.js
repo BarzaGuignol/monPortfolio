@@ -1,5 +1,7 @@
 const models = require("../models");
 
+const validate = require("../services/tableaux");
+
 const browse = (req, res) => {
   models.tableaux
     .findAll()
@@ -31,15 +33,20 @@ const read = (req, res) => {
 const add = (req, res) => {
   const tableau = req.body;
 
-  models.tableaux
-    .insert(tableau)
-    .then(([result]) => {
-      res.location(`/tableaux/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const error = validate(tableau, "required");
+  if (!error) {
+    models.tableaux
+      .insert(tableau)
+      .then(([result]) => {
+        res.location(`/tableaux/${result.insertId}`).sendStatus(201);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  } else {
+    res.status(422).send(error);
+  }
 };
 
 const destroy = (req, res) => {
@@ -63,19 +70,24 @@ const edit = (req, res) => {
 
   tableau.id = parseInt(req.params.id, 10);
 
-  models.tableaux
-    .update(tableau)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  const validation = validate(tableau, "optional");
+  if (validation) {
+    res.status(422).send(validation);
+  } else {
+    models.tableaux
+      .update(tableau)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  }
 };
 
 module.exports = {
