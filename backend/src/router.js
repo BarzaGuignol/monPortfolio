@@ -7,6 +7,7 @@ const CvControllers = require("./controllers/cvControllers");
 const ProjetsControllers = require("./controllers/projetsControllers");
 const LivresControllers = require("./controllers/livresControllers");
 const TableauxControllers = require("./controllers/tableauxControllers");
+const UserController = require("./controllers/userControllers");
 
 router.get("/items", itemControllers.browse);
 router.get("/items/:id", itemControllers.read);
@@ -37,5 +38,9 @@ router.get("/experiences/:id", CvControllers.read);
 router.put("/experiences/:id", CvControllers.edit);
 router.get("/livres/:id", LivresControllers.read);
 router.put("/livres/:id", LivresControllers.edit);
+
+router.post("/login", UserController.validateUser);
+router.get("/admin", UserController.browse);
+router.post("/admin", UserController.add);
 
 module.exports = router;
