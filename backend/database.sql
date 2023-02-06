@@ -22,7 +22,8 @@ CREATE TABLE
     experiences (
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         titre VARCHAR(255) NOT NULL,
-        date INT NOT NULL,
+        dateDebut INT,
+        dateFin INT NOT NULL,
         description VARCHAR(500) NOT NULL,
         url_image VARCHAR(255) NOT NULL,
         impairOuPair INT NOT NULL,
@@ -33,17 +34,81 @@ INSERT INTO
     experiences (
         id,
         titre,
-        date,
+        dateDebut,
+        dateFin,
         description,
         url_image,
-        impairOuPair
+        impairOuPair,
+        competences_id
     )
 VALUES (
         1,
         "Baccalauréat",
+        null,
         2015,
         "Baccalauréat filière Scientifique option Science de l'ingénieur spécialité physique-chimie",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/2004_Baccalaur%C3%A9at_g%C3%A9n%C3%A9ral.pdf/page1-800px-2004_Baccalaur%C3%A9at_g%C3%A9n%C3%A9ral.pdf.jpg?20191031103801",
+        1,
+        1
+    ),
+    (
+        2,
+        "Projet ETNA intitulé la 4ème voie",
+        2016,
+        2017,
+        "Mise en œuvre d’une matrice de 294 pixels à l’aide de lampe de chantier. Conception des cartes électroniques et programmes nécessaires.",
+        "https://www.florentlamouroux.com/wdat/work64/img_0664web.jpg",
+        2,
+        1
+    ),
+    (
+        3,
+        "DUT GEII",
+        null,
+        2017,
+        "Diplôme Universitaire Technologique en Génie Electrique et Informatique Industrielle. Cours : Automatisme / Electronique / Informatique de réseau / Electricité de puissance",
+        "https://faux-diplome.org/wp-content/uploads/2018/02/DUT.jpg",
+        1,
+        1
+    ),
+    (
+        4,
+        "Stage Développement Informatique à RTE",
+        null,
+        2017,
+        "Stage de fin d'étude sur 3 mois. Mise en place d'un moteur de recherche interne à RTE en VBA.",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/RTE_logo.svg/180px-RTE_logo.svg.png",
+        2,
+        1
+    ),
+    (
+        5,
+        "Technicien Tests",
+        2018,
+        2019,
+        "Expertise et gestion des différents produits aéronautiques sur plusieurs lignes de production en milieu sensible risque ESD.",
+        "https://upload.wikimedia.org/wikipedia/fr/thumb/5/5f/Safran_-_logo_2016.png/798px-Safran_-_logo_2016.png?20200125182820",
+        1,
+        1
+    ),
+    (
+        6,
+        "Technicien de Maintenance",
+        2019,
+        2022,
+        "Suivi régulier d'un parc de machines pour assurer le maintien de la production en atmosphère contrôlée de type salle blanche.",
+        "https://upload.wikimedia.org/wikipedia/fr/thumb/e/e0/STMicroelectronics_%28logo-2020%29.svg/512px-STMicroelectronics_%28logo-2020%29.svg.png?20200615215723",
+        2,
+        1
+    ),
+    (
+        7,
+        "Wild Code School",
+        null,
+        2023,
+        "Activités et associations : Formation intensive 5 mois - Développeur Web Titre professionnel Développeur Web et Web Mobile, inscrit au RNCP, de niveau 5 (équivalent Bac+2)",
+        "https://www.wildcodeschool.com/assets/wildcodeschool-logo-meta-image-f6f2f7f52b82bfc419f031f6a989020a8b094d7a4e6676ab6f0dff0b0f470da9.png",
+        1,
         1
     );
 
@@ -52,7 +117,7 @@ CREATE TABLE
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         nom VARCHAR(100) NOT NULL,
         annees_exp INT NOT NULL,
-        url_image VARCHAR(255) NOT NULL
+        icone VARCHAR(255) NOT NULL
     );
 
 INSERT INTO
@@ -60,7 +125,7 @@ INSERT INTO
         id,
         nom,
         annees_exp,
-        url_image
+        icone
     )
 VALUES (
         1,
@@ -74,8 +139,9 @@ CREATE TABLE
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         titre VARCHAR(255) NOT NULL,
         url_image VARCHAR(255) NOT NULL,
-        description VARCHAR(255) NOT NULL,
+        description VARCHAR(500) NOT NULL,
         url_github VARCHAR(255) NOT NULL,
+        url_site varchar(255)
     );
 
 INSERT INTO
@@ -84,36 +150,76 @@ INSERT INTO
         titre,
         url_image,
         description,
-        url_github
+        url_github,
+        url_site
     )
 VALUES (
         1,
-        "projet 1",
-        "",
-        "Site réalisé en HTML/CSS sur le thème des héros des comics",
+        "Projet 1",
+        "../src/assets/projet1.png",
+        "Premier projet réalisé au sein de la Wild Code School pour validation compétences HTML/CSS. Réalisation d'un site internet sur Stan Lee et ses comics.",
+        "https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-TEAM-A",
+        ""
+    ),
+    (
+        2,
+        "Projet 2",
+        "../src/assets/projet2.png",
+        "Deuxième projet réalisé au sein de la Wild Code School pour validation compétences React et Express. Réalisation d'un site d'e-commerce sur le thème de pokémon.",
+        "https://github.com/WildCodeSchool/2022-09-JS-RMT-JSCREW-projet2-team2",
+        ""
+    ),
+    (
+        3,
+        "Hackathon 1",
+        "../src/assets/hackathon1.png",
+        "48h pour créer un site internet sur le thème du voyage. Nous avons réalisé Space Journey, une interface haute en couleur pour faire voyager et jouer nos utilisateurs dans l'espace.",
+        "https://github.com/o6ris/SpaceJourney",
+        "https://dev--hackathon-space-journey.netlify.app/"
+    ),
+    (
+        4,
+        "Projet 3",
+        "../src/assets/projet3.png",
+        "Troisième projet réalisé au sein de la Wild Code School pour validation des compétences en React/Express/SQL. Réalisation d'une interface intranet pour créer, gérer et archiver des prises de décisions en fullstack (interface front en React et back en Express)",
+        "https://github.com/WildCodeSchool/2022-09-RMT-JSCREW-Makesense",
+        "https://makesense.remote-fr-3.wilders.dev/"
+    ),
+    (
+        5,
+        "Hackathon 2",
+        "../src/assets/hackathon2.png",
+        "48H pour créer un site de location d'une flotte de véhicules avec trois niveaux d'authentification. Elaboration d'une logique back pour donner la possibilité de mettre à jour la flotte de véhicule par des professionnels et donner la possibilité aux particuliers d'effectuer une réservation. Hackathon réalisé en partenariat avec Amazon Web Services.",
+        "https://github.com/o6ris/NoPainNoGainTheComeBack/tree/dev",
         ""
     );
 
 CREATE TABLE
     livres (
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        titre VARCHAR(255) NOT NULL,
-        url_image VARCHAR(255) NOT NULL,
-        url_boutique VARCHAR(255) NOT NULL
+        titreLivre VARCHAR(255) NOT NULL,
+        imageLivre VARCHAR(255) NOT NULL,
+        url_boutique VARCHAR(255)
     );
 
 INSERT INTO
     livres (
         id,
-        titre,
-        url_image,
+        titreLivre,
+        imageLivre,
         url_boutique
     )
 VALUES (
         1,
         "Robert Noyer: Les Yeux du Mal",
-        "",
-        ""
+        "https://m.media-amazon.com/images/I/51msy531FyL.jpg",
+        "https://www.amazon.fr/Robert-Noyer-Yeux-du-Mal/dp/2955806919"
+    ),
+    (
+        2,
+        "Le Marionnettiste",
+        "https://www.thebookedition.com/1671367-img_product_list/le-marionnettiste.jpg",
+        "https://www.thebookedition.com/fr/le-marionnettiste-p-394973.html"
     );
 
 CREATE TABLE tableaux (

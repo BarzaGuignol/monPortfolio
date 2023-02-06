@@ -11,3 +11,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #0c3944;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  background-color: #ffc300;
+  opacity: 90%;
+  color: #1c2833;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}

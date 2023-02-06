@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-import ExpCarte from "@components/ExpCarte";
-import ExpCarteResponsive from "@components/ExpCarteResponsive";
+import ExpCarteAdmin from "@components/ExpCarteAdmin";
+import ExpCarteResponsiveAdmin from "@components/ExpCarteResponsiveAdmin";
 import apiConnexion from "../services/apiConnexion";
 
 import "./CurriculumVitae.css";
 
-export default function CurriculumVitae() {
+export default function CurriculumVitaeAdmin() {
   const [expData, setExpData] = useState();
 
   useEffect(() => {
@@ -17,6 +17,19 @@ export default function CurriculumVitae() {
       })
       .catch((err) => console.error(err));
   }, []);
+
+  const gestionSuppresionExp = (exp) => {
+    const nouvelleExpList = [...expData];
+    nouvelleExpList.splice(nouvelleExpList.indexOf(exp), 1);
+    setExpData(nouvelleExpList);
+  };
+
+  const supprimerExp = (exp) => {
+    apiConnexion
+      .delete(`experiences/${exp.id}`)
+      .then(() => gestionSuppresionExp(exp))
+      .catch((err) => console.error(err));
+  };
 
   return (
     <div className="min-h-screen bg-[#21618C]">
@@ -33,12 +46,20 @@ export default function CurriculumVitae() {
       </div>
       <div className="hidden sm:block pb-20">
         {expData?.map((data) => (
-          <ExpCarte key={data.id} data={data} />
+          <ExpCarteAdmin
+            key={data.id}
+            data={data}
+            supprimerExp={supprimerExp}
+          />
         ))}
       </div>
       <div className="sm:hidden pb-20">
         {expData?.map((data) => (
-          <ExpCarteResponsive key={data.id} data={data} />
+          <ExpCarteResponsiveAdmin
+            key={data.id}
+            data={data}
+            supprimerExp={supprimerExp}
+          />
         ))}
       </div>
     </div>
