@@ -15,12 +15,12 @@ export default function Page404() {
               <div className="col-sm-12">
                 <div className="col-sm-10 col-sm-offset-1 text-center bg-[#21618C]">
                   <div className="four_zero_four_bg">
-                    <h1 className="text-center text-[#1C2833]">
-                      404
-                    </h1>
+                    <h1 className="text-center text-[#1C2833]">404</h1>
                   </div>
                   <div className="contant_box_404 bg-[#21618C]">
-                    <h3 className="pt-10 text-[#FFC300] font-bold">On dirait que vous êtes perdu,</h3>
+                    <h3 className="pt-10 text-[#FFC300] font-bold">
+                      On dirait que vous êtes perdu,
+                    </h3>
                     <p className="pb-5 text-[#FFC300] font-bold">
                       la page que vous recherchez n'est pas disponible !
                     </p>

@@ -17,10 +17,10 @@ import CurriculumVitaeUni from "@pages/CurriculumVitaeUni";
 import EcritsUni from "@pages/EcritsUni";
 import APITableauxUni from "@pages/APITableauxUni";
 import ProjetsUni from "@pages/ProjetsUni";
+import Page404 from "@pages/Page404";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
-import Page404 from "@pages/Page404";
 
 function App() {
   return (
