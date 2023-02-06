@@ -16,18 +16,18 @@ export default function LivreCarte({ data }) {
         />
       </div>
       <div className="border-b-4 border-[#FFC300] sm:border-0 pb-4">
-      {data.url_boutique ? (
-        <div className="flex flex-row justify-center">
-          <a
-            href={data.url_boutique}
-            target="_blank"
-            className="bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] mt-12 p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
-            rel="noreferrer"
-          >
-            Lien Boutique
-          </a>
-        </div>
-      ) : null}
+        {data.url_boutique ? (
+          <div className="flex flex-row justify-center">
+            <a
+              href={data.url_boutique}
+              target="_blank"
+              className="bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] mt-12 p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+              rel="noreferrer"
+            >
+              Lien Boutique
+            </a>
+          </div>
+        ) : null}
       </div>
     </div>
   );

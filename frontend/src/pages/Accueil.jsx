@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-no-bind */
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Accueil.css";
 
 export default function Accueil() {
-  
   function retourHaut() {
     window.scrollTo({
       top: 0,
@@ -18,7 +19,9 @@ export default function Accueil() {
         <div className="top left border-[#FFC300]" />
         <div className="bottom right border-[#FFC300]" />
         <p className="text-2xl text-[#FFC300]">Bonjour, je suis</p>
-        <h1 className="text-6xl sm:text-8xl font-bold text-[#3498DB] mt-4">Yanis Viot.</h1>
+        <h1 className="text-6xl sm:text-8xl font-bold text-[#3498DB] mt-4">
+          Yanis Viot.
+        </h1>
         <h2 className="text-5xl sm:text-7xl font-bold text-[#1C2833] mt-4">
           Un artisan du web.
         </h2>

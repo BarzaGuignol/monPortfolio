@@ -19,11 +19,10 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 20px;
-  background-color: #FFC300;
+  background-color: #ffc300;
   opacity: 90%;
-  color: #1C2833;
+  color: #1c2833;
   font-size: 1.5rem;
   cursor: pointer;
-  font-weight:bold;
-
+  font-weight: bold;
 }
