@@ -20,6 +20,7 @@ import ProjetsUni from "@pages/ProjetsUni";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
+import Page404 from "@pages/Page404";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Accueil />} />
+          <Route path="*" element={<Page404 />} />
           <Route path="/curriculumvitae" element={<CurriculumVitae />} />
           <Route path="/projets" element={<Projets />} />
           <Route path="/passion" element={<Passion />} />
