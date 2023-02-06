@@ -33,17 +33,17 @@ const read = (req, res) => {
 const add = (req, res) => {
   const livre = req.body;
 
-const error = validate(livre, "required");
+  const error = validate(livre, "required");
   if (!error) {
-  models.livres
-    .insert(livre)
-    .then(([result]) => {
-      res.location(`/livres/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+    models.livres
+      .insert(livre)
+      .then(([result]) => {
+        res.location(`/livres/${result.insertId}`).sendStatus(201);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
   } else {
     res.status(422).send(error);
   }
@@ -74,19 +74,19 @@ const edit = (req, res) => {
   if (validation) {
     res.status(422).send(validation);
   } else {
-  models.livres
-    .update(livre)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+    models.livres
+      .update(livre)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
   }
 };
 

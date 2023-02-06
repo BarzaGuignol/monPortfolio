@@ -47,7 +47,6 @@ const add = (req, res) => {
   } else {
     res.status(422).send(error);
   }
-
 };
 
 const destroy = (req, res) => {
@@ -75,19 +74,19 @@ const edit = (req, res) => {
   if (validation) {
     res.status(422).send(validation);
   } else {
-  models.experiences
-    .update(experience)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+    models.experiences
+      .update(experience)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
   }
 };
 

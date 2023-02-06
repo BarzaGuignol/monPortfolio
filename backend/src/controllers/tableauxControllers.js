@@ -35,15 +35,15 @@ const add = (req, res) => {
 
   const error = validate(tableau, "required");
   if (!error) {
-  models.tableaux
-    .insert(tableau)
-    .then(([result]) => {
-      res.location(`/tableaux/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+    models.tableaux
+      .insert(tableau)
+      .then(([result]) => {
+        res.location(`/tableaux/${result.insertId}`).sendStatus(201);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
   } else {
     res.status(422).send(error);
   }
@@ -74,19 +74,19 @@ const edit = (req, res) => {
   if (validation) {
     res.status(422).send(validation);
   } else {
-  models.tableaux
-    .update(tableau)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+    models.tableaux
+      .update(tableau)
+      .then(([result]) => {
+        if (result.affectedRows === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(204);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
   }
 };
 
