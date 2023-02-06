@@ -30,6 +30,13 @@ export default function PassionAdmin() {
       .catch((err) => console.error(err));
   };
 
+  function retourHaut() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="min-h-screen bg-[#21618C]">
       <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">
@@ -53,6 +60,7 @@ export default function PassionAdmin() {
           <Link
             to="/bundle/tableaux"
             className="bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] w-1/3 mt-12 p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            onClick={retourHaut}
           >
             En voir plus
           </Link>

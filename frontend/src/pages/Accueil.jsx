@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import "./Accueil.css";
 
 export default function Accueil() {
+  
+  function retourHaut() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="bg-[#21618C]">
       <div className="min-h-screen flex flex-col w-4/5 sm:w-2/5 mx-auto pt-20 sm:pt-48 corners">
@@ -31,7 +39,7 @@ export default function Accueil() {
         <h2 className="text-4xl font-bold text-[#3498DB] flex flex-row">
           <p className="text-4xl font-bold text-[#FFC300] mr-4">-</p>Mes projets
         </h2>
-        <Link to="/projets">
+        <Link to="/projets" onClick={retourHaut}>
           <p className="text-2xl text-[#1C2833] mt-8 hover:text-[#FFC300]">
             Pour découvrir mes compétences à travers des sites internet réalisés
             par mes soins.
@@ -48,7 +56,7 @@ export default function Accueil() {
           <p className="text-4xl font-bold text-[#FFC300] ml-4">-</p>Mes
           passions
         </h2>
-        <Link to="/passion">
+        <Link to="/passion" onClick={retourHaut}>
           <p className="text-2xl text-[#1C2833] mt-8 hover:text-[#FFC300]">
             D'autres sujets sur lesquels j'ai exercé mon savoir et développé de
             la compétence.
@@ -65,7 +73,7 @@ export default function Accueil() {
           <p className="text-4xl font-bold text-[#FFC300] mr-4">-</p>Mes
           contacts
         </h2>
-        <Link to="/contact">
+        <Link to="/contact" onClick={retourHaut}>
           <p className="text-2xl text-[#1C2833] mt-8 hover:text-[#FFC300]">
             Intéressé par mon profil ? Un mot, une remarque à me dire ? C'est
             par ici que ça se passe.
@@ -81,7 +89,7 @@ export default function Accueil() {
         <h2 className="text-4xl font-bold text-[#3498DB] flex flex-row-reverse">
           <p className="text-4xl font-bold text-[#FFC300] ml-4">-</p>Le mystère
         </h2>
-        <Link to="mystère">
+        <Link to="/mystere" onClick={retourHaut}>
           <p className="text-2xl text-[#1C2833] mt-8 hover:text-[#FFC300]">
             Voilà bien une étrangeté, une anomalie, qu'est-ce que ça fait là sur
             un portfolio ? je me le demande bien.

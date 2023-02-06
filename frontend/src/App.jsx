@@ -22,6 +22,7 @@ import LeBalcon from "@pages/LeBalcon";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
+import BoutonRetourHaut from "@components/BoutonRetourHaut";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/bundle/ecrits/:id" element={<EcritsUni />} />
           <Route path="/bundle/tableaux/:id" element={<APITableauxUni />} />
         </Routes>
+        <BoutonRetourHaut />
         <Footer />
       </Router>
     </div>
