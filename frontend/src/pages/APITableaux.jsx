@@ -22,7 +22,7 @@ export default function APITableaux() {
       <div>
         {mesTableaux?.map((tableau) => {
           return (
-            <div className="pb-20">
+            <div className="sm:pb-20">
               <h2 className="text-center text-4xl font-bold text-[#FFC300] pt-20 mb-20">
                 {tableau.titre}
               </h2>
