@@ -22,19 +22,19 @@ export default function APITableaux() {
       <div>
         {mesTableaux?.map((tableau) => {
           return (
-            <div className="pb-20">
+            <div className="sm:pb-20">
               <h2 className="text-center text-4xl font-bold text-[#FFC300] pt-20 mb-20">
                 {tableau.titre}
               </h2>
-              <div className="flex flex-row border-b-4 border-[#FFC300] pb-20 w-[80%] mx-auto">
-                <div className="w-1/2">
+              <div className="flex flex-col sm:flex-row border-b-4 border-[#FFC300] pb-20 w-[80%] mx-auto">
+                <div className="sm:w-1/2">
                   <img
                     src={tableau.url_image}
                     alt={tableau.titre}
                     className="min-w-400px max-h-[600px] mx-auto"
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="sm:w-1/2 mt-8 sm:mt-0">
                   <h3 className="w-[80%] mx-auto mb-2 text-[#3498DB] font-bold">
                     Mouvement artistique : {tableau.style}
                   </h3>

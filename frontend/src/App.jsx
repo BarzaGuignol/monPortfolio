@@ -19,6 +19,7 @@ import APITableauxUni from "@pages/APITableauxUni";
 import ProjetsUni from "@pages/ProjetsUni";
 import Page404 from "@pages/Page404";
 import LeBalcon from "@pages/LeBalcon";
+import BoutonRetourHaut from "@components/BoutonRetourHaut";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
@@ -54,6 +55,7 @@ function App() {
           <Route path="/bundle/ecrits/:id" element={<EcritsUni />} />
           <Route path="/bundle/tableaux/:id" element={<APITableauxUni />} />
         </Routes>
+        <BoutonRetourHaut />
         <Footer />
       </Router>
     </div>

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-bind */
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -30,12 +32,19 @@ export default function PassionAdmin() {
       .catch((err) => console.error(err));
   };
 
+  function retourHaut() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="min-h-screen bg-[#21618C]">
       <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">
         Mes écrits
       </h2>
-      <div className="flex flex-col sm:flex sm:flex-row sm:space-x-20 w-4/5 mx-auto text-center justify-center mt-20 pb-20">
+      <div className="flex flex-col sm:flex sm:flex-row w-[80%] mx-auto mt-20 pb-20">
         {mesLivres?.map((data) => (
           <LivreCarteAdmin
             key={data.id}
@@ -51,8 +60,9 @@ export default function PassionAdmin() {
         <TableauCarte />
         <div className="flex justify-center">
           <Link
-            to="/tableaux"
+            to="/bundle/tableaux"
             className="bg-transparent text-[#FFC300] text-center font-bold border-2 border-[#FFC300] w-1/3 mt-12 p-2 rounded hover:bg-[#FFC300] hover:opacity-80 hover:text-[#1C2833]"
+            onClick={retourHaut}
           >
             En voir plus
           </Link>

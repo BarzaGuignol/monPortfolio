@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function LivreCarteAdmin({ data, supprimerLivre }) {
   return (
-    <div className="flex flex-col w-[200px] h-[400px] mb-20 space-x-12">
+    <div className="flex flex-col w-[200px] h-[400px] mb-20 mx-auto text-center justify-center mt-20">
       <div className="h-20 mb-8">
         <h2 className="text-2xl text-[#FFC300] font-bold">
           {data.titreLivre}
@@ -38,7 +38,7 @@ export default function LivreCarteAdmin({ data, supprimerLivre }) {
           </a>
         </div>
       ) : null}
-      <div className="mt-8 text-[#FFC300]">
+      <div className="mt-8 text-[#FFC300] border-b-4 border-[#FFC300] sm:border-0 pb-4">
         <Link
           to={`/bundle/ecrits/${data.id}`}
           className="p-2 hover:border-2 hover:border-[#FFC300]"
