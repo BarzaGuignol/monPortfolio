@@ -18,6 +18,7 @@ import EcritsUni from "@pages/EcritsUni";
 import APITableauxUni from "@pages/APITableauxUni";
 import ProjetsUni from "@pages/ProjetsUni";
 import Page404 from "@pages/Page404";
+import LeBalcon from "@pages/LeBalcon";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
@@ -36,6 +37,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/mystere" element={<Mystere />} />
           <Route path="/tableaux" element={<APITableaux />} />
+          <Route path="/lebalcon" element={<LeBalcon />} />
           <Route path="/bundle" element={<PanneauAdministrateur />} />
           <Route
             path="/bundle/curriculumvitae"
