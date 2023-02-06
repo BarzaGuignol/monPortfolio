@@ -20,6 +20,7 @@ import ProjetsUni from "@pages/ProjetsUni";
 import Page404 from "@pages/Page404";
 import LeBalcon from "@pages/LeBalcon";
 import BoutonRetourHaut from "@components/BoutonRetourHaut";
+import Login from "@pages/Login";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/mystere" element={<Mystere />} />
           <Route path="/tableaux" element={<APITableaux />} />
           <Route path="/lebalcon" element={<LeBalcon />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/bundle" element={<PanneauAdministrateur />} />
           <Route
             path="/bundle/curriculumvitae"
