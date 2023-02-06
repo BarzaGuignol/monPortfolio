@@ -20,11 +20,10 @@ import ProjetsUni from "@pages/ProjetsUni";
 import Page404 from "@pages/Page404";
 import LeBalcon from "@pages/LeBalcon";
 import BoutonRetourHaut from "@components/BoutonRetourHaut";
+import Login from "@pages/Login";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
-import Private from "./layout/Private";
-import Login from "@pages/Login";
 
 function App() {
   return (
@@ -43,20 +42,20 @@ function App() {
           <Route path="/lebalcon" element={<LeBalcon />} />
           <Route path="/login" element={<Login />} />
           <Route path="/bundle" element={<PanneauAdministrateur />} />
-            <Route
-              path="/bundle/curriculumvitae"
-              element={<CurriculumVitaeAdmin />}
-            />
-            <Route path="/bundle/projets" element={<ProjetsAdmin />} />
-            <Route path="/bundle/passion" element={<PassionAdmin />} />
-            <Route path="/bundle/tableaux" element={<APITableauxAdmin />} />
-            <Route
-              path="/bundle/curriculumvitae/:id"
-              element={<CurriculumVitaeUni />}
-            />
-            <Route path="/bundle/projets/:id" element={<ProjetsUni />} />
-            <Route path="/bundle/ecrits/:id" element={<EcritsUni />} />
-            <Route path="/bundle/tableaux/:id" element={<APITableauxUni />} />
+          <Route
+            path="/bundle/curriculumvitae"
+            element={<CurriculumVitaeAdmin />}
+          />
+          <Route path="/bundle/projets" element={<ProjetsAdmin />} />
+          <Route path="/bundle/passion" element={<PassionAdmin />} />
+          <Route path="/bundle/tableaux" element={<APITableauxAdmin />} />
+          <Route
+            path="/bundle/curriculumvitae/:id"
+            element={<CurriculumVitaeUni />}
+          />
+          <Route path="/bundle/projets/:id" element={<ProjetsUni />} />
+          <Route path="/bundle/ecrits/:id" element={<EcritsUni />} />
+          <Route path="/bundle/tableaux/:id" element={<APITableauxUni />} />
         </Routes>
         <BoutonRetourHaut />
         <Footer />

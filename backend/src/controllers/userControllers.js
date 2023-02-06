@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const models = require("../models");
-const { verifyHash, hashPassword } = require("../services/auth");
+const { verifyHash } = require("../services/auth");
 
 const browse = (req, res) => {
   models.administrateur
@@ -62,5 +62,5 @@ const add = (req, res) => {
 module.exports = {
   browse,
   validateUser,
-  add
+  add,
 };

@@ -4,7 +4,10 @@ import apiConnexion from "../services/apiConnexion";
 import Admin from "../contexts/Admin";
 
 export default function Login() {
-  const [connexion, setConnexion] = useState({ identifiant: "", motDePasse: "" });
+  const [connexion, setConnexion] = useState({
+    identifiant: "",
+    motDePasse: "",
+  });
   const [message, setMessage] = useState("");
   const [hidePassword, setHidePassword] = useState(true);
   const adminContext = useContext(Admin.AdminContext);
@@ -17,9 +20,7 @@ export default function Login() {
   const handleSubmit = (route) => {
     setMessage("");
     const pwdPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
-    if (
-      pwdPattern.test(connexion.password)
-    ) {
+    if (pwdPattern.test(connexion.password)) {
       apiConnexion
         .post("/login", { ...connexion })
         .then((res) => {
@@ -102,5 +103,5 @@ export default function Login() {
         </form>
       </div>
     </div>
-  )
+  );
 }
