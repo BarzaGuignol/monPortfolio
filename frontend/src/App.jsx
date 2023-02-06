@@ -17,6 +17,7 @@ import CurriculumVitaeUni from "@pages/CurriculumVitaeUni";
 import EcritsUni from "@pages/EcritsUni";
 import APITableauxUni from "@pages/APITableauxUni";
 import ProjetsUni from "@pages/ProjetsUni";
+import Page404 from "@pages/Page404";
 import Accueil from "./pages/Accueil";
 
 import "./App.css";
@@ -28,6 +29,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Accueil />} />
+          <Route path="*" element={<Page404 />} />
           <Route path="/curriculumvitae" element={<CurriculumVitae />} />
           <Route path="/projets" element={<Projets />} />
           <Route path="/passion" element={<Passion />} />
