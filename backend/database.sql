@@ -77,7 +77,7 @@ VALUES (
         null,
         2017,
         "Stage de fin d'étude sur 3 mois. Mise en place d'un moteur de recherche interne à RTE en VBA.",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/RTE_logo.svg/180px-RTE_logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/1/1f/RTE_logo.svg",
         2,
         1
     ),

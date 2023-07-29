@@ -7,15 +7,16 @@ export default function ExpCarte({ data }) {
     <div>
       {data.impairOuPair === 1 ? (
         <div className="flex flex-row">
-          <div className="w-2/5">
+          <div className="w-2/5 my-auto">
             <img
-              className="w-[50%] mx-auto text-[#1C2833]"
+              className="w-[50%] mx-auto text-[#1C2833] max-h-60"
               src={data.url_image}
               alt={data.titre}
             />
           </div>
 
           <div className="w-1/5">
+            <div className="w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
             <div className="w-20 h-20 border-2 border-[#1C2833] rounded-full align-middle mx-auto">
               {data.dateDebut ? (
                 <>
@@ -32,10 +33,10 @@ export default function ExpCarte({ data }) {
                 </p>
               )}
             </div>
-            <div className="w-0 h-72 border-2 border-[#1C2833] align-middle mx-auto" />
+            <div className="w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
           </div>
 
-          <div className="w-2/5 pr-20">
+          <div className="w-2/5 my-auto pr-20">
             <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">
               {data.titre}
             </p>
@@ -44,7 +45,7 @@ export default function ExpCarte({ data }) {
         </div>
       ) : (
         <div className="flex flex-row">
-          <div className="w-2/5 pl-20">
+          <div className="w-2/5 pl-20 my-auto">
             <p className="text-2xl text-[#3498DB] font-bold mb-2 underline underline-offset-8 decoration-[#FFC300]">
               {data.titre}
             </p>
@@ -52,6 +53,7 @@ export default function ExpCarte({ data }) {
           </div>
 
           <div className="w-1/5">
+          <div className="w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
             <div className="w-20 h-20 border-2 border-[#1C2833] rounded-full align-middle mx-auto">
               {data.dateDebut ? (
                 <>
@@ -68,11 +70,11 @@ export default function ExpCarte({ data }) {
                 </p>
               )}
             </div>
-            <div className="w-0 h-72 border-2 border-[#1C2833] align-middle mx-auto" />
+            <div className="w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
           </div>
-          <div className="w-2/5">
+          <div className="w-2/5 my-auto">
             <img
-              className="w-[50%] mx-auto"
+              className="w-[50%] mx-auto max-h-60"
               src={data.url_image}
               alt={data.titre}
             />

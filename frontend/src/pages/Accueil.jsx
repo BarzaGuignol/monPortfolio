@@ -23,7 +23,7 @@ export default function Accueil() {
           Yanis Viot.
         </h1>
         <h2 className="text-5xl sm:text-7xl font-bold text-[#1C2833] mt-4">
-          Un artisan du web.
+          Artisan du web.
         </h2>
         <p className="text-2xl text-[#1C2833] mt-8">
           Je suis un développeur web fullstack spécialisé dans la conception de

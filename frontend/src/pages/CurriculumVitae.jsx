@@ -27,7 +27,7 @@ export default function CurriculumVitae() {
         <div className="w-1/5 sm:w-2/5" />
         <div className=" w-3/5 sm:w-1/5">
           <div className="mb-20 sm:mb-0 w-48 h-48 border-2 border-[#1C2833] rounded-full align-middle mx-auto avatar" />
-          <div className="hidden sm:block w-0 h-48 border-2 border-[#1C2833] align-middle mx-auto" />
+          <div className="hidden sm:block w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
           <div className="w-1/5 sm:w-2/5" />
         </div>
       </div>

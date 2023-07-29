@@ -100,7 +100,7 @@ export default function Contact() {
             <img
               src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
               alt="logo github"
-              className="w-20 h-20 rounded lg mb-8 mx-auto"
+              className="w-20 h-20 rounded-lg mb-8 mx-auto"
             />
             Github
           </a>
