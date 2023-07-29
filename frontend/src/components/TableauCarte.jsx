@@ -12,19 +12,19 @@ export default function TableauCarte() {
 
   const slides = [
     {
-      url: `https://www.kazoart.com/blog/wp-content/uploads/2017/03/van-gogh-la-nuit-etoilee-1.jpg`,
+      url: `../src/assets/la-nuit-étoilée.jpg`,
     },
     {
-      url: `https://www.infochretienne.com/wp-content/uploads/2019/07/Sans-titre-1-69-1200x600.jpg`,
+      url: `../src/assets/la-jeune-fille-à-la-perle.jpg`,
     },
     {
-      url: `https://cms.guggenheim-bilbao.eus/uploads/2020/09/composition-8.jpg`,
+      url: `../src/assets/composition-VIII.jpg`,
     },
     {
-      url: `https://upload.wikimedia.org/wikipedia/commons/8/8d/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg`,
+      url: `../src/assets/le-déjeuner-des-canotiers.jpg`,
     },
     {
-      url: `https://upload.wikimedia.org/wikipedia/commons/3/3e/Irises-Vincent_van_Gogh.jpg`,
+      url: `../src/assets/iris.jpg`,
     },
   ];
 

@@ -19,6 +19,9 @@ export default function APITableaux() {
       <h2 className="text-center text-[#3498DB] text-4xl pt-10 underline underline-offset-8 decoration-[#FFC300]">
         Les plus grands tableaux de l'histoire
       </h2>
+      <p className="text-center text-2xl font-bold text-[#1C2833] mt-4">
+        Une API maison
+      </p>
       <div>
         {mesTableaux?.map((tableau) => {
           return (
