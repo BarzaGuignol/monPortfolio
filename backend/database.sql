@@ -47,7 +47,7 @@ VALUES (
         null,
         2015,
         "Baccalauréat filière Scientifique option Science de l'ingénieur spécialité physique-chimie",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/2004_Baccalaur%C3%A9at_g%C3%A9n%C3%A9ral.pdf/page1-800px-2004_Baccalaur%C3%A9at_g%C3%A9n%C3%A9ral.pdf.jpg?20191031103801",
+        "../src/assets/logo-baccaulauréat.jpg",
         1,
         1
     ),
@@ -57,7 +57,7 @@ VALUES (
         2016,
         2017,
         "Mise en œuvre d’une matrice de 294 pixels à l’aide de lampe de chantier. Conception des cartes électroniques et programmes nécessaires.",
-        "https://www.florentlamouroux.com/wdat/work64/img_0664web.jpg",
+        "../src/assets/projet-etna.jpg",
         2,
         1
     ),
@@ -67,7 +67,7 @@ VALUES (
         null,
         2017,
         "Diplôme Universitaire Technologique en Génie Electrique et Informatique Industrielle. Cours : Automatisme / Electronique / Informatique de réseau / Electricité de puissance",
-        "https://faux-diplome.org/wp-content/uploads/2018/02/DUT.jpg",
+        "../src/assets/logo-DUT.jpg",
         1,
         1
     ),
@@ -77,7 +77,7 @@ VALUES (
         null,
         2017,
         "Stage de fin d'étude sur 3 mois. Mise en place d'un moteur de recherche interne à RTE en VBA.",
-        "https://upload.wikimedia.org/wikipedia/commons/1/1f/RTE_logo.svg",
+        "../src/assets/logo-rte.svg",
         2,
         1
     ),
@@ -87,7 +87,7 @@ VALUES (
         2018,
         2019,
         "Expertise et gestion des différents produits aéronautiques sur plusieurs lignes de production en milieu sensible risque ESD.",
-        "https://upload.wikimedia.org/wikipedia/fr/thumb/5/5f/Safran_-_logo_2016.png/798px-Safran_-_logo_2016.png?20200125182820",
+        "../src/assets/logo-safran.png",
         1,
         1
     ),
@@ -97,7 +97,7 @@ VALUES (
         2019,
         2022,
         "Suivi régulier d'un parc de machines pour assurer le maintien de la production en atmosphère contrôlée de type salle blanche.",
-        "https://upload.wikimedia.org/wikipedia/fr/thumb/e/e0/STMicroelectronics_%28logo-2020%29.svg/512px-STMicroelectronics_%28logo-2020%29.svg.png?20200615215723",
+        "../src/assets/logo-stmicroelectronics.png",
         2,
         1
     ),
@@ -107,7 +107,7 @@ VALUES (
         null,
         2023,
         "Activités et associations : Formation intensive 5 mois - Développeur Web Titre professionnel Développeur Web et Web Mobile, inscrit au RNCP, de niveau 5 (équivalent Bac+2)",
-        "https://www.wildcodeschool.com/assets/wildcodeschool-logo-meta-image-f6f2f7f52b82bfc419f031f6a989020a8b094d7a4e6676ab6f0dff0b0f470da9.png",
+        "../src/assets/logo-wildcodeschool.png",
         1,
         1
     );
