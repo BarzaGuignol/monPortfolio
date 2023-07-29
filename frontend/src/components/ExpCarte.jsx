@@ -53,7 +53,7 @@ export default function ExpCarte({ data }) {
           </div>
 
           <div className="w-1/5">
-          <div className="w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
+            <div className="w-0 h-36 border-2 border-[#1C2833] align-middle mx-auto" />
             <div className="w-20 h-20 border-2 border-[#1C2833] rounded-full align-middle mx-auto">
               {data.dateDebut ? (
                 <>
