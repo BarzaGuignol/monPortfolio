@@ -27,7 +27,7 @@ export default function ExpCarteResponsive({ data }) {
 
         <div className="mb-20">
           <img
-            className="w-[50%] h-[50%] mx-auto text-[#1C2833]"
+            className="w-[50%] h-[50%] mx-auto text-[#1C2833] max-h-60"
             src={data.url_image}
             alt={data.titre}
           />

@@ -16,8 +16,8 @@ export default function Accueil() {
   return (
     <div className="bg-[#21618C]">
       <div className="min-h-screen flex flex-col w-4/5 sm:w-2/5 mx-auto pt-20 sm:pt-48 corners">
-        <div className="top left border-[#FFC300]" />
-        <div className="bottom right border-[#FFC300]" />
+        <div className="hidden 2xl:flex top left border-[#FFC300]" />
+        <div className="hidden 2xl:flex bottom right border-[#FFC300]" />
         <p className="text-2xl text-[#FFC300]">Bonjour, je suis</p>
         <h1 className="text-6xl sm:text-8xl font-bold text-[#3498DB] mt-4">
           Yanis Viot.
@@ -27,8 +27,8 @@ export default function Accueil() {
         </h2>
         <p className="text-2xl text-[#1C2833] mt-8">
           Je suis un développeur web fullstack spécialisé dans la conception de
-          site internet. Actuellement, je suis en recherche de nouvelles
-          connaissances et compétences à explorer.
+          site internet. Toujours à la recherche de nouvelles connaissances et
+          compétences à explorer.
         </p>
         <Link
           to="/curriculumvitae"
